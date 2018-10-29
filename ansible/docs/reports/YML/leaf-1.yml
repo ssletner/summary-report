@@ -3,10 +3,6 @@ ansible_net_all_ipv4_addresses:
 ansible_net_all_ipv6_addresses: []
 ansible_net_filesystems:
 - 'bootflash:'
-ansible_net_filesystems_info:
-    'bootflash:':
-        spacefree_kb: 14179756
-        spacetotal_kb: 16035260
 ansible_net_gather_subset:
 - hardware
 - default

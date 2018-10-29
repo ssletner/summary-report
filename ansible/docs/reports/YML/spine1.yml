@@ -1319,7 +1319,7 @@ ansible_net_interfaces:
         speed: 1000 Mb/s
         state: up
         type: Ethernet
-ansible_net_memfree_mb: 973
+ansible_net_memfree_mb: 972
 ansible_net_memtotal_mb: 2992
 ansible_net_model: NX-OSv Chassis
 ansible_net_neighbors:
