@@ -75,5 +75,5 @@
         - name: CREATE MASTER YML REPORT (ALL FACTS)
           assemble:
             src: ./docs/reports/YML
-            dest: ./docs/master-report.yml
+            dest: ./docs/master-report-all-facts.yml
             delimiter: "---"
