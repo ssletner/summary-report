@@ -1,5 +1,7 @@
 # summary-report
 
+This playbook generates reports of the lab environment build in this class. 
+
 The playbook reports.yml performs the following actions.
 
 - Makes the directories /docs/reports and /docs/reports/yml
@@ -19,6 +21,13 @@ The playbook reports.yml performs the following actions.
     - master text report which combines all text files created from j2 template 
     - master yml report which combines all yml files and includes all facts
 
+
+The report includes the following information:
+Hostname:      
+Vendor:        
+Model:         
+OS Version:    
+Serial Number: 
 
 ## Lab
 
