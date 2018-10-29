@@ -1,0 +1,37 @@
+---
+
+  - name: GATHER IOS FACTS
+    hosts: iosxe
+    gather_facts: no
+
+    tasks:
+      - name: GET FACTS
+        ios_facts:
+        register: lab_ios_facts
+
+      - debug:
+          var: lab_ios_facts
+
+      - name: DEBUG OS VERSION
+        debug: var=lab_ios_facts['ansible_facts']['ansible_net_version']
+
+      - name: DEBUG SHORTHAND OS VERSION
+        debug: var=ansible_net_version
+
+  - name: GATHER NXOS FACTS
+    hosts: nxos
+    gather_facts: no
+
+    tasks:
+      - name: GET FACTS
+        nxos_facts:
+        register: lab_nxos_facts
+
+      - debug:
+          var: lab_nxos_facts
+
+      - name: DEBUG OS VERSION
+        debug: var=lab_nxos_facts['ansible_facts']['ansible_net_version']
+
+      - name: DEBUG SHORTHAND OS VERSION
+        debug: var=ansible_net_version

@@ -1,0 +1,63 @@
+ansible_net_all_ipv4_addresses:
+- 10.34.183.218
+ansible_net_all_ipv6_addresses: []
+ansible_net_filesystems:
+- 'bootflash:'
+ansible_net_filesystems_info:
+    'bootflash:':
+        spacefree_kb: 14179804
+        spacetotal_kb: 16035260
+ansible_net_gather_subset:
+- hardware
+- default
+- interfaces
+ansible_net_hostname: leaf-2
+ansible_net_image: bootflash:packages.conf
+ansible_net_interfaces:
+    GigabitEthernet1:
+        bandwidth: 1000000
+        description: null
+        duplex: Full
+        ipv4:
+        -   address: 10.34.183.218
+            subnet: '27'
+        lineprotocol: 'up '
+        macaddress: 5e00.0003.0000
+        mediatype: RJ45
+        mtu: 1500
+        operstatus: up
+        type: CSR vNIC
+    GigabitEthernet2:
+        bandwidth: 1000000
+        description: null
+        duplex: Full
+        ipv4: []
+        lineprotocol: 'up '
+        macaddress: fa16.3e6e.5841
+        mediatype: RJ45
+        mtu: 1500
+        operstatus: up
+        type: CSR vNIC
+    GigabitEthernet3:
+        bandwidth: 1000000
+        description: null
+        duplex: Full
+        ipv4: []
+        lineprotocol: 'up '
+        macaddress: fa16.3eb7.82e5
+        mediatype: RJ45
+        mtu: 1500
+        operstatus: up
+        type: CSR vNIC
+ansible_net_memfree_mb: 879984
+ansible_net_memtotal_mb: 1225375
+ansible_net_model: CSR1000V
+ansible_net_neighbors:
+    Gi2:
+    -   host: spine-1.lab.com
+        port: Eth2/2
+    Gi3:
+    -   host: spine-2.lab.com
+        port: Eth2/2
+ansible_net_serialnum: 9TSLGA14AZR
+ansible_net_version: 16.06.01

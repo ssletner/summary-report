@@ -1,0 +1,28 @@
+[all:vars]
+ansible_user=sletner
+ansible_ssh_pass=sletner
+ansible_connection=network_cli
+
+
+[iosxe]
+leaf-1 ansible_host=10.34.183.217
+leaf-2 ansible_host=10.34.183.218
+leaf-3 ansible_host=10.34.183.219
+
+[iosxe:vars]
+ansible_network_os=ios
+api=ssh
+vendor=cisco
+ansible_become=yes
+ansible_become_method=enable
+ansible_become_pass=cisco
+
+
+[nxos]
+spine1 ansible_host=10.34.183.215
+spine2 ansible_host=10.34.183.216
+
+[nxos:vars]
+ansible_network_os=nxos
+api=ssh
+vendor=cisco
