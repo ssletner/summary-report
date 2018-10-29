@@ -1,14 +1,27 @@
-# virl-lab
+# summary-report
 
-This lab runs VIRL on an ESXi host in a lab environment. 
+The playbook reports.yml performs the following actions.
 
-A dedicated lab server in the same lab will run Ansible. 
+- Makes the directories /docs/reports and /docs/reports/yml
+    - /reports is used for the reports generated following the j2 template
+    - /reports/yml is used for the the dumps of all facts in yml format
+    - /docs is where the master reports are stored
 
-virlutils is used to start/stop the lab. 
+- Gathers IOS facts from all iosxe devices in the lab
+    - creates a text files using j2 template per device
+    - creates a yml file of ALL found on the device
+
+- Gathers NXOS facts from all nxos devices in the lab
+    - creates a text files using j2 template per device
+    - creates a yml file of ALL found on the device
+
+- Generates final report
+    - master text report which combines all text files created from j2 template 
+    - master yml report which combines all yml files and includes all facts
 
 
-### Topology
+## Lab
 
-The topology consists of 2 spine switches (NX-OSV) and 3 leaf switches (CSR1000v). 
+The <a href="https://github.com/ssletner/virl-lab">virl-lab</a>  topology was used for the report. 
 
 ![alt text](https://github.com/ssletner/virl-lab/blob/master/virl-lab-leaf-spine.jpg "Lab Topology")
